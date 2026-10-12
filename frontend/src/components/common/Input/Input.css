@@ -1,0 +1,107 @@
+/**
+ * Form Input & Select Styles
+ */
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-align: left;
+  width: 100%;
+}
+
+.form-field__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-heading);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.form-field__required {
+  color: var(--color-danger);
+  font-weight: var(--font-weight-bold);
+}
+
+.form-field__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-field__icon {
+  position: absolute;
+  left: 0.85rem;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-field__control {
+  width: 100%;
+  padding: 0.65rem 0.95rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-heading);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-field__control::placeholder {
+  color: var(--color-text-light);
+}
+
+.form-field__control--with-icon {
+  padding-left: 2.5rem;
+}
+
+/* Hover & Focus States */
+.form-field__control:hover:not(:disabled) {
+  border-color: var(--color-border-strong);
+}
+
+.form-field__control:focus {
+  border-color: var(--color-primary-600);
+  box-shadow: 0 0 0 3px rgba(29, 53, 87, 0.12);
+}
+
+/* Error State */
+.form-field--error .form-field__control {
+  border-color: var(--color-danger);
+  background-color: var(--color-danger-bg);
+}
+
+.form-field--error .form-field__control:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+/* Disabled State */
+.form-field--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-field--disabled .form-field__control {
+  background-color: var(--color-bg-subtle);
+  cursor: not-allowed;
+}
+
+/* Messages */
+.form-field__message {
+  font-size: var(--font-size-xs);
+  margin-top: 2px;
+}
+
+.form-field__message--error {
+  color: var(--color-danger);
+  font-weight: var(--font-weight-medium);
+}
+
+.form-field__message--helper {
+  color: var(--color-text-muted);
+}

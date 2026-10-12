@@ -1,0 +1,60 @@
+/**
+ * HomePage Styles
+ */
+
+.homepage-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-page);
+}
+
+#main-content {
+  flex: 1;
+}
+
+/* Floating Toast Notification */
+.homepage-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--color-primary-900);
+  color: var(--color-text-inverse);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  z-index: var(--z-modal);
+  animation: toastSlideUp 0.3s ease-out;
+  border-left: 4px solid var(--color-accent-400);
+  max-width: 420px;
+}
+
+.homepage-toast__icon {
+  color: var(--color-success);
+  flex-shrink: 0;
+}
+
+@keyframes toastSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .homepage-toast {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: none;
+  }
+}

@@ -1,0 +1,309 @@
+/**
+ * Hotel Details Modal Styles
+ */
+
+.hotel-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(7, 17, 30, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hotel-modal {
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-xl);
+  max-width: 720px;
+  width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  animation: modalSlideUp 0.25s ease-out;
+}
+
+@keyframes modalSlideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.hotel-modal__close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-heading);
+  transition: background-color var(--transition-fast);
+}
+
+.hotel-modal__close-btn:hover {
+  background-color: #ffffff;
+  color: var(--color-danger);
+}
+
+/* Hero Image */
+.hotel-modal__hero {
+  position: relative;
+  height: 240px;
+  background-color: var(--color-primary-900);
+}
+
+.hotel-modal__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hotel-modal__hero-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+/* Scrollable Body */
+.hotel-modal__body {
+  padding: var(--space-6);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.hotel-modal__rating-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.hotel-modal__rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-heading);
+}
+
+.rating-count {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.hotel-modal__destination-tag {
+  font-size: var(--font-size-xs);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-800);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.hotel-modal__title {
+  font-family: var(--font-family-serif);
+  font-size: 1.65rem;
+  color: var(--color-text-heading);
+  margin-bottom: 4px;
+}
+
+.hotel-modal__location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* Sections */
+.hotel-modal__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.hotel-modal__section-title {
+  font-size: var(--font-size-base);
+  color: var(--color-text-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.hotel-modal__desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-body);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Amenities Grid */
+.hotel-modal__amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-3);
+}
+
+.hotel-modal__amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-body);
+  background-color: var(--color-bg-page);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.amenity-icon {
+  color: var(--color-primary-700);
+  display: flex;
+  align-items: center;
+}
+
+/* Rooms List */
+.hotel-modal__rooms-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.room-card-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg-page);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.room-card-preview__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: 2px;
+}
+
+.room-card-preview__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.room-card-preview__price-action {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.room-amt {
+  font-size: 1.15rem;
+  color: var(--color-primary-800);
+}
+
+.room-per {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* Policies */
+.hotel-modal__policies {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-body);
+}
+
+.hotel-modal__academic-alert {
+  padding: var(--space-3);
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin-top: var(--space-2);
+}
+
+/* Sticky Footer */
+.hotel-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-surface);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hotel-modal__footer-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-price-label {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.footer-price-val {
+  font-size: 1.25rem;
+  color: var(--color-primary-800);
+  font-weight: var(--font-weight-bold);
+}
+
+.hotel-modal__footer-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+@media (max-width: 600px) {
+  .room-card-preview {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .room-card-preview__price-action {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hotel-modal__footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hotel-modal__footer-actions {
+    width: 100%;
+  }
+
+  .hotel-modal__footer-actions button {
+    flex: 1;
+  }
+}

@@ -1,0 +1,46 @@
+/**
+ * Card Styles
+ */
+
+.card {
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Border */
+.card--bordered {
+  border: 1px solid var(--color-border-subtle);
+}
+
+/* Padding variants */
+.card--pad-none {
+  padding: 0;
+}
+
+.card--pad-sm {
+  padding: var(--space-3);
+}
+
+.card--pad-md {
+  padding: var(--space-6);
+}
+
+.card--pad-lg {
+  padding: var(--space-8);
+}
+
+/* Hoverable effect */
+.card--hoverable:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-border-strong);
+}
+
+/* Interactive click cursor */
+.card--interactive {
+  cursor: pointer;
+}

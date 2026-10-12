@@ -1,0 +1,150 @@
+/**
+ * ==============================================================================
+ * DESIGN SYSTEM TOKENS & CSS VARIABLES
+ * Project: GrandStay - Multi-Hotel Booking Platform (BCA College Project)
+ * Stage 1: Design System Foundation
+ * ==============================================================================
+ * 
+ * WHY CSS VARIABLES?
+ * CSS Variables (Custom Properties) allow us to define colors, spacing, and typography
+ * in ONE central place. If we ever want to tweak the gold accent or the navy blue,
+ * we change it here, and the entire website updates automatically!
+ */
+
+:root {
+  /* ============================================================================
+     1. COLOR PALETTE
+     Direction: Deep navy blue (authority, luxury, trust) with warm gold (hospitality)
+     ============================================================================ */
+
+  /* Primary Brand: Deep Navy Blue */
+  --color-primary-900: #07111e;
+  --color-primary-800: #0c1a2e; /* Base Navy Brand Color */
+  --color-primary-700: #132742;
+  --color-primary-600: #1d3557;
+  --color-primary-500: #294973;
+  --color-primary-200: #bac8dc;
+  --color-primary-100: #e5ebf3;
+  --color-primary-50:  #f3f6fa;
+
+  /* Accent: Warm Gold / Amber (Luxury & Hospitality) */
+  --color-accent-800: #8c5d13;
+  --color-accent-700: #b87b1c;
+  --color-accent-600: #d49128;
+  --color-accent-500: #e8a838; /* Base Gold Accent */
+  --color-accent-400: #f4be5c;
+  --color-accent-100: #fef4e2;
+  --color-accent-50:  #fffaf2;
+
+  /* Surface & Backgrounds */
+  --color-bg-page: #f8fafc;        /* Subtle warm slate-gray background */
+  --color-bg-surface: #ffffff;     /* Pure white for cards, modals, dropdowns */
+  --color-bg-subtle: #f1f5f9;      /* Slightly darker section background */
+  --color-bg-hover: #f3f5f8;
+
+  /* Text & Content */
+  --color-text-heading: #0c1a2e;   /* Deep navy for readable, crisp titles */
+  --color-text-body: #334155;      /* Slate charcoal for high-contrast body reading */
+  --color-text-muted: #64748b;     /* Slate gray for secondary subtitles and dates */
+  --color-text-light: #94a3b8;     /* Light slate for placeholders */
+  --color-text-inverse: #ffffff;   /* Pure white text on dark buttons & banners */
+
+  /* Borders & Dividers */
+  --color-border-subtle: #e2e8f0;  /* Standard clean border */
+  --color-border-strong: #cbd5e1;  /* Emphasized border on inputs / active items */
+  --color-border-focus: #1d3557;   /* Keyboard focus border */
+
+  /* Status Colors (Semantic feedback) */
+  --color-success: #059669;
+  --color-success-bg: #ecfdf5;
+  --color-success-border: #a7f3d0;
+
+  --color-warning: #d97706;
+  --color-warning-bg: #fffbeb;
+  --color-warning-border: #fde68a;
+
+  --color-danger: #dc2626;
+  --color-danger-bg: #fef2f2;
+  --color-danger-border: #fecaca;
+
+  --color-info: #0284c7;
+  --color-info-bg: #f0f9ff;
+  --color-info-border: #bae6fd;
+
+  /* ============================================================================
+     2. TYPOGRAPHY
+     Modern, clean, legible sans-serif for UI + luxury serif option for headings
+     ============================================================================ */
+  --font-family-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.65;
+
+  /* ============================================================================
+     3. SPACING & SIZING (8-point grid system for clean alignment)
+     ============================================================================ */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+
+  /* Container Boundaries */
+  --container-max-width: 1200px;
+  --container-padding: 1.5rem;
+
+  /* ============================================================================
+     4. CORNER RADIUS (Tasteful, modern soft curves)
+     ============================================================================ */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* ============================================================================
+     5. SHADOWS & ELEVATION (Restrained & natural)
+     ============================================================================ */
+  --shadow-xs: 0 1px 2px rgba(12, 26, 46, 0.05);
+  --shadow-sm: 0 2px 5px rgba(12, 26, 46, 0.06);
+  --shadow-md: 0 4px 14px rgba(12, 26, 46, 0.08);
+  --shadow-lg: 0 12px 28px rgba(12, 26, 46, 0.1);
+  --shadow-hover: 0 16px 36px rgba(12, 26, 46, 0.12);
+
+  /* ============================================================================
+     6. TRANSITIONS & ANIMATIONS (Crisp, non-distracting)
+     ============================================================================ */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 220ms ease-in-out;
+  --transition-smooth: 320ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ============================================================================
+     7. Z-INDEX LAYERS
+     ============================================================================ */
+  --z-base: 1;
+  --z-dropdown: 50;
+  --z-sticky: 100;
+  --z-modal: 500;
+}
